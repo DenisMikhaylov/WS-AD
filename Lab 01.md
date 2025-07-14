@@ -21,7 +21,7 @@ Lab Setup
 
 Virtual machines: LON-DC1, LON-SVR1, LON-SVR2
 User name: Adatum\Administrator
-Password: Pa55w0rd
+Password: Pa55w.rd
 For this lab, you will use the available virtual machine environment. Before you begin the lab, you must
 complete the following steps:
 
@@ -30,7 +30,7 @@ complete the following steps:
 3. In the Actions pane, click Connect. Wait until the virtual machine starts.
 4. Sign in by using the following credentials:
 • User name: Administrator
-• Password: Pa55w0rd
+• Password: Pa55w.rd
 • Domain: Adatum
 5. Repeat steps one through four for LON-SVR1 and LON-SVR2.
 
@@ -100,14 +100,14 @@ operation section, click Change.
 4. In the Credentials for deployment operation dialog box, enter the following, click OK, and then
 click Next:
 o User name: Adatum\Administrator
-o Password: Pa55w0rd
+o Password: Pa55w.rd
 
 5. On the Domain Controller Options page, remove the selections for the Domain Name System
 (DNS) server and Global Catalog (GC). Read-only domain controller (RODC) also should not be
 selected.
 
 6. In the Type the Directory Services Restore Mode (DSRM) password section, enter and confirm the
-password Pa55w0rd, and then click Next.
+password Pa55w.rd, and then click Next.
 
 7. On the Additional Options page, click Next.
 
@@ -148,7 +148,7 @@ NoRebootonCompletion:$false –SiteName “Default-First-Site-Name” –SysvolP
 ```
 16. In the Windows PowerShell Credential Request dialog box, enter the following, and then click OK:
 o User name: Adatum\Administrator
-o Password: Pa55w0rd
+o Password: Pa55w.rd
 
 17. When prompted, enter and confirm the SafeModeAdministratorPassword as Pa$$w0rd.
 
@@ -238,7 +238,7 @@ machine.
 5. Wait until the export finishes.
 
 6. In the Actions pane, in the LON-DC1 section, click Start, and then sign in as
-Adatum\Administrator with password Pa55w0rd.
+Adatum\Administrator with password Pa55w.rd.
 
 Task 3: Perform domain controller cloning
 
