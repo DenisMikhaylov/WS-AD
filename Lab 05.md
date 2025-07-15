@@ -35,7 +35,7 @@ New-ADUser -City:"London" -Company:"Adatum" -Department:"IT" -DisplayName:"Abbi 
 New-ADUser -City:"London" -Company:"Adatum" -Department:"IT" -DisplayName:"Beth Burke" -GivenName:"Beth" -Surname:"Burke" -Name:"Beth Burke" -Path:"OU=IT,DC=ADATUM,DC=COM" -SamAccountName:"Beth" -Server:"LON-DC1.ADATUM.COM" -Type:"user" -UserPrincipalName:"Beth@ADATUM.COM" -AccountPassword $password -Enabled $true
 New-ADUser -City:"London" -Company:"Adatum" -Department:"IT" -DisplayName:"Dante Dabney" -GivenName:"Dante" -Surname:"Dabney"  -Name:"Dante Dabney" -Path:"OU=IT,DC=ADATUM,DC=COM" -SamAccountName:"Dante" -Server:"LON-DC1.ADATUM.COM" -Type:"user" -UserPrincipalName:"Dante@ADATUM.COM" -AccountPassword $password -Enabled $true
 New-ADUser -City:"London" -Company:"Adatum" -Department:"Research" -DisplayName:"Cai Chu" -GivenName:"Cai" -Surname:"Chu" -Name:"Cai Chu" -UserPrincipalName:"Cai@ADATUM.COM" -SamAccountName:"Cai" -Path:"OU=Research,DC=ADATUM,DC=COM"  -Server:"LON-DC1.ADATUM.COM"  -Type:"user" -AccountPassword $password -Enabled $true
-New-ADUser -City:"London" -Company:"Adatum" -Department:"Research" -DisplayName:"Connie Chu" -GivenName:"Connie" -Surname:"Chu" -Name:"Connie Chu" -UserPrincipalName:"Connie@ADATUM.COM" -SamAccountName:"Connie" -Path:"OU=Research,DC=ADATUM,DC=COM"  -Server:"LON-DC1.ADATUM.COM"  -Type:"user" -AccountPassword $password -Enabled $true
+New-ADUser -City:"London" -Company:"Adatum" -Department:"Research" -DisplayName:"Connie Vaughn" -GivenName:"Connie" -Surname:"Vaughn" -Name:"Connie Vaughn" -UserPrincipalName:"Connie@ADATUM.COM" -SamAccountName:"Connie" -Path:"OU=Research,DC=ADATUM,DC=COM"  -Server:"LON-DC1.ADATUM.COM"  -Type:"user" -AccountPassword $password -Enabled $true
 ```
 Exercise 1: Creating and configuring GPOs
 
@@ -159,7 +159,19 @@ setting, and then click Enabled.
 
 Exercise 1: Verifying GPO application
 
- Task 1: Perform RSoP analysis
+Scenario
+After configuring settings for the Research department and computers in the conference rooms, to make
+sure that all settings apply as intended, you need to create RSoP reports from both Group Policy
+Management Console and a client. You do not have access to a computer in the conference rooms, so you
+have to simulate how settings will apply by using Group Policy modeling analyses. You also need to
+investigate what events are stored in Event Viewer regarding Group Policy.
+The main tasks for this exercise are as follows:
+1. Perform RSoP analysis.
+2. Analyze RSoP with GPResult.
+3. Evaluate GPO results by using Group Policy Modeling Wizard.
+4. Review policy events.
+
+Task 1: Perform RSoP analysis
 1. Switch to LON-SVR2, and then verify that you are signed in as Adatum\Connie. If necessary, use the
 password Pa55w.rd.
 2. Click Start, type cmd, and then press Enter.
@@ -267,6 +279,34 @@ correct application of your GPOs, examined Group Policy events, and verified the
 infrastructure.
 
 Exercise 2: Troubleshooting GPOs
+
+Scenario
+A user has opened a Help desk ticket because the screen saver settings do not apply as intended. You have
+to investigate the issue and make sure that the correct settings apply to the user.
+You must resolve the reported GPO application problem that Tier 1 help desk staff could not resolve.
+Incident Record
+
+Incident Reference Number: 604531
+Date of Call July 15
+Time of Call 10:02
+User Connie Vaughn
+Status OPEN
+
+
+Incident Details
+
+A user reports that the Research configuration does not apply to her anymore.
+Additional Information
+A user reports that suddenly she has a fixed time of 10 minutes before her screen saver activates. Because
+of an application that the Research department uses, she is unable to complete her work.
+
+Plan of Action...
+Resolution...
+
+The main tasks for this exercise are as follows:
+1. Read the Help desk Incident Record and simulate the problem.
+2. Update the Plan of Action section of the Incident Record.
+3. Troubleshoot and resolve the problem
 
 Task 1: Read the Help desk Incident Record and simulate the problem
 1. Read Help desk Incident Record 604531 in the exercise scenario.
