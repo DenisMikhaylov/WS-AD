@@ -330,7 +330,7 @@ Set-ADAccountPassword Ty
 ```
 Enable-ADAccount Ty
 ```
-9. Test the account by switching to LON-CL1, and then sign in as Ty with the password Pa55w.rd.
+9. Test the account by switching to LON-svr1, and then sign in as Ty with the password Pa55w.rd.
 
 Task 2: Create a new group by using Windows PowerShell
  On LON-DC1, in the Administrator: Windows PowerShell window, run the following command:
