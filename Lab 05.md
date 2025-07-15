@@ -190,8 +190,7 @@ application, and then identify the GPO from which the settings were obtained.
 17. Click the Policy Events tab, and then locate the event that logs the policy refresh that you triggered
 with the gpupdate command.
 18. Click the Summary tab, right-click an empty space on the page, and then click Save Report.
-19. In the navigation pane, click Desktop, and then click Save.MCT USE ONLY. STUDENT USE PROHIBITED
-L5-36 Implementing Group Policy
+19. In the navigation pane, click Desktop, and then click Save.
 20. On the desktop, right-click Connie on LON-SVR2.htm, point to Open with, and then click Internet
 Explorer.
 21. When you have examined the report, close Microsoft Internet Explorer.
@@ -227,8 +226,7 @@ Modeling.
 and then click Browse. In the Select User dialog box type Connie, and then press Enter.
 6. In the Computer information section, select the Computer option, and then click Browse. In the
 Select Computer dialog box, type LON-SVR2, and then press Enter.
-7. In the Group Policy Modeling Wizard, click Next.MCT USE ONLY. STUDENT USE PROHIBITED
-Identity with Windows Server 2016 L5-37
+7. In the Group Policy Modeling Wizard, click Next.
 8. On the Advanced Simulation Options page, select the Loopback Processing check box, and then
 select the Merge option. Even though the Conference Room Settings GPO specifies loopback
 processing, you must instruct Group Policy Modeling Wizard to consider loopback processing in its
@@ -276,7 +274,8 @@ Task 1: Read the Help desk Incident Record and simulate the problem
 3. In File Explorer, in the navigation pane, expand Allfiles (E:), expand Labfiles, and then click Mod05.
 4. In the details pane, right-click Mod05-1.ps1, and then click Run with PowerShell. If prompted, press Y
 and then press Enter.
- Task 2: Update the Plan of Action section of the Incident Record
+
+Task 2: Update the Plan of Action section of the Incident Record
 1. Read the Additional Information section of the Incident Record in the exercise scenario in the
 student manual.
 2. Update the Plan of Action section of the Incident Record in the student manual with your
@@ -286,7 +285,8 @@ o RSoP from Group Policy Results Wizard will afterward provide the configuration
 Connie Vaughn.
 o The Research Application Override GPO should provide the correct configuration. Investigate
 the configuration of the GPO.
- Task 3: Troubleshoot and resolve the problem
+
+Task 3: Troubleshoot and resolve the problem
 1. On LON-SVR2, sign in as Adatum\Connie with the password Pa55w.rd.
 2. Right-click Start, and then click Control Panel.
 3. In Control Panel, click Appearance and Personalization, and then click Change Screen Saver.
