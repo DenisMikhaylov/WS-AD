@@ -50,8 +50,7 @@ Task 3: View the effects of the GPO’s settings
 4. In the Allowed apps and features list, select the following check boxes, and then click OK:
 o Remote Event Log Management
 o Windows Management Instrumentation (WMI)
-5. Sign out, and then sign in as Adatum\Connie with the password Pa55w.rd.MCT USE ONLY. STUDENT USE PROHIBITED
-L5-32 Implementing Group Policy
+5. Sign out, and then sign in as Adatum\Connie with the password Pa55w.rd.
 6. Click Start, type screen saver, and then click Change screen saver. (It may take a few minutes for the
 option to appear.)
 7. In the Screen Saver Settings dialog box, notice that the Wait option is dimmed—you cannot change
