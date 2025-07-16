@@ -21,51 +21,46 @@ Implement settings by using Group Policy preferences.
 Configure Folder Redirection.
 
 
-Exercise 1: Creating and configuring GPOs
+Managing user settings with Group
+Policy
 
-Task 1: Create and edit a GPO
-1. On LON-DC1, from Server Manager, click Tools, and then click Group Policy Management.
-2. If necessary, switch to the Group Policy Management window.
-3. In Group Policy Management Console, in the navigation pane, expand Forest: Adatum.com, Domains, and Adatum.com, and then click the Group Policy Objects container.
-4. In the navigation pane, right-click the Group Policy Objects container, and then click New.
-5. In the Name text box, type ADATUM Standards, and then click OK.
-6. In the details pane, right-click the ADATUM Standards Group Policy Object (GPO), and then click Edit.
-7. In the Group Policy Management Editor window, in the navigation pane, expand User Configuration, expand Policies, expand Administrative Templates, and then click System.
-8. Double-click the Prevent access to registry editing tools policy setting.
-9. In the Prevent access to registry editing tools dialog box, click Enabled, and then click OK.
-10. In the navigation pane, expand User Configuration, expand Policies, expand Administrative Templates, expand Control Panel, and then click Personalization.
-11. In the details pane, double-click the Screen saver timeout policy setting.
-12. In the Screen saver timeout dialog box, click Enabled, in the Seconds text box, type 600, and then click OK.
-13. Double-click the Password protect the screen saver policy setting.
-14. In the Password protect the screen saver dialog box, click Enabled, and then click OK.
-15. Close the Group Policy Management Editor window.
+Exercise 1: Using administrative templates to manage user settings
 
+Task 1: Import administrative templates for Microsoft Office 2016
+1. On LON-DC1, on the taskbar, click the File Explorer icon.
+2. In File Explorer, in the navigation pane, expand Allfiles (E:), expand Labfiles, and then click Mod06.
+3. Double-click admintemplates_x64_4390-1000_en-us.exe.
+4. In The Microsoft Office 2016 Administrative Templates dialog box, select the Click here to accept
+the Microsoft Software License Terms check box, and then click Continue.
+5. In the Browse for Folder dialog box, click Desktop, and then click OK.
+6. In The Microsoft Office 2016 Administrative Templates dialog box, click OK.
+7. In File Explorer, in the navigation pane, click Desktop, and then in the content pane, double-click
+admx.
+8. Press Ctrl+A to select all files, right-click, and then click Copy.
+9. In the navigation pane, expand Local Disk (C:), expand Windows, right-click PolicyDefinitions, and
+then click Paste.
+10. Close File Explorer.
 
-Task 2: Link the GPO
-
-1. In the Group Policy Management window, in the navigation pane, right-click the Adatum.com domain, and then click Link an Existing GPO.
-2. In the Select GPO dialog box, click ADATUM Standards, and then click OK.
-
-Task 3: View the effects of the GPO’s settings
-1. Switch to LON-, and then sign in as Adatum\Administrator with the password Pa55w.rd.
-2. Right-click Start, and then click Control Panel.
-3. Click System and Security, and then click Allow an app through Windows Firewall.
-4. In the Allowed apps and features list, select the following check boxes, and then click OK:
-o Remote Event Log Management
-o Windows Management Instrumentation (WMI)
-5. Sign out, and then sign in as Adatum\Connie with the password Pa55w.rd.
-6. Click Start, type screen saver, and then click Change screen saver. (It may take a few minutes for the option to appear.)
-7. In the Screen Saver Settings dialog box, notice that the Wait option is dimmed—you cannot change
-the time-out. Notice that the On resume, display logon screen option is selected and dimmed and
-that you cannot change the settings. If the On resume, display logon screen option is not selected
-and dimmed, then perform the following steps:
-a. Right-click Start and then click Run.
-b. In the Run dialog box, in the Open text box, type gpupdate /force, and then click OK.
-c. Click Start, type screen saver, and then click Change screen saver.
-d. Click OK.
-e. Right-click Start, and then click Run.
-f. In the Run dialog box, in the Open text box, type regedit, and then click OK.
-g. In the Registry Editor dialog box, click OK
+Task 2: Configure Office 2016 settings
+1. On LON-DC1, in Server Manager, click Tools, and then click Group Policy Management.
+2. Switch to the Group Policy Management window.
+3. In the navigation pane, expand Forest: Adatum.com, expand Domains, expand Adatum.com, and
+then click Group Policy Objects.
+4. Right-click Group Policy Objects, and then click New.
+5. In the New GPO dialog box, type Office 2016 settings, and then click OK.
+6. In the contents pane, right-click Office 2016 settings, and then click Edit.
+7. In the Group Policy Management Editor, in the navigation pane, expand User Configuration,
+expand Policies, expand Administrative Templates, and then click Microsoft Excel 2016.
+8. Expand Microsoft Excel 2016, expand Excel Options, click Customize Ribbon, and then double-click
+Display Developer tab in the Ribbon.
+9. In the Display Developer tab in the Ribbon dialog box, click Enabled, and then click OK.
+10. In the Group Policy Management Editor, click Save, and then double-click Default file location.
+11. In the Default file location dialog box, click Enabled, in the Default file location text box, type
+%userprofile%\Desktop, and then click OK.
+12. Close the Group Policy Management Editor.
+13. In Group Policy Management, right-click the Adatum.com domain, and then click Link an
+Existing GPO.
+14. In the Select GPO dialog box, click Office 2016 settings, and then click OK.
 
 Exercise 2: Implementing settings by using Group Policy preferences
 
