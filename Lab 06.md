@@ -24,6 +24,29 @@ Configure Folder Redirection.
 Managing user settings with Group
 Policy
 
+Exercise 0: Creating and managing object in AD DS
+```
+New-ADOrganizationalUnit -Name:"Managers" -Path:"DC=ADATUM,DC=COM" -ProtectedFromAccidentalDeletion:$true -Server:"LON-DC1.ADATUM.COM"
+New-ADOrganizationalUnit -Name:"Research" -Path:"DC=ADATUM,DC=COM" -ProtectedFromAccidentalDeletion:$true -Server:"LON-DC1.ADATUM.COM"
+New-ADOrganizationalUnit -Name:"Marketing" -Path:"DC=ADATUM,DC=COM" -ProtectedFromAccidentalDeletion:$true -Server:"LON-DC1.ADATUM.COM"
+New-ADOrganizationalUnit -Name:"Development" -Path:"DC=ADATUM,DC=COM" -ProtectedFromAccidentalDeletion:$true -Server:"LON-DC1.ADATUM.COM"
+New-ADOrganizationalUnit -Name:"IT" -Path:"DC=ADATUM,DC=COM" -ProtectedFromAccidentalDeletion:$true -Server:"LON-DC1.ADATUM.COM"
+
+New-ADGroup -GroupCategory:"Security" -GroupScope:"Global" -Name:"Managers" -Path:"OU=Managers,DC=ADATUM,DC=COM" -SamAccountName:"Managers" -Server:"LON-DC1.ADATUM.COM"
+New-ADGroup -GroupCategory:"Security" -GroupScope:"Global" -Name:"Research" -Path:"OU=Research,DC=ADATUM,DC=COM" -SamAccountName:"Research" -Server:"LON-DC1.ADATUM.COM"
+New-ADGroup -GroupCategory:"Security" -GroupScope:"Global" -Name:"Marketing" -Path:"OU=Marketing,DC=ADATUM,DC=COM" -SamAccountName:"Marketing" -Server:"LON-DC1.ADATUM.COM"
+New-ADGroup -GroupCategory:"Security" -GroupScope:"Global" -Name:"Development" -Path:"OU=Development,DC=ADATUM,DC=COM" -SamAccountName:"Development" -Server:"LON-DC1.ADATUM.COM"
+New-ADGroup -GroupCategory:"Security" -GroupScope:"Global" -Name:"IT" -Path:"OU=IT,DC=ADATUM,DC=COM" -SamAccountName:"IT" -Server:"LON-DC1.ADATUM.COM"
+
+$password='Pa55w.rd' | ConvertTo-SecureString -AsPlainText -Force
+
+New-ADUser -City:"London" -Company:"Adatum" -Department:"IT" -DisplayName:"Abbi Skinner" -GivenName:"Abbi" -Surname:"Skinner" -Name:"Abbi Skinner" -UserPrincipalName:"Abbi@ADATUM.COM" -SamAccountName:"Abbi" -Path:"OU=IT,DC=ADATUM,DC=COM"  -Server:"LON-DC1.ADATUM.COM"  -Type:"user" -AccountPassword $password -Enabled $true
+New-ADUser -City:"London" -Company:"Adatum" -Department:"IT" -DisplayName:"Beth Burke" -GivenName:"Beth" -Surname:"Burke" -Name:"Beth Burke" -Path:"OU=IT,DC=ADATUM,DC=COM" -SamAccountName:"Beth" -Server:"LON-DC1.ADATUM.COM" -Type:"user" -UserPrincipalName:"Beth@ADATUM.COM" -AccountPassword $password -Enabled $true
+New-ADUser -City:"London" -Company:"Adatum" -Department:"IT" -DisplayName:"Dante Dabney" -GivenName:"Dante" -Surname:"Dabney"  -Name:"Dante Dabney" -Path:"OU=IT,DC=ADATUM,DC=COM" -SamAccountName:"Dante" -Server:"LON-DC1.ADATUM.COM" -Type:"user" -UserPrincipalName:"Dante@ADATUM.COM" -AccountPassword $password -Enabled $true
+New-ADUser -City:"London" -Company:"Adatum" -Department:"Research" -DisplayName:"Cai Chu" -GivenName:"Cai" -Surname:"Chu" -Name:"Cai Chu" -UserPrincipalName:"Cai@ADATUM.COM" -SamAccountName:"Cai" -Path:"OU=Research,DC=ADATUM,DC=COM"  -Server:"LON-DC1.ADATUM.COM"  -Type:"user" -AccountPassword $password -Enabled $true
+New-ADUser -City:"London" -Company:"Adatum" -Department:"Research" -DisplayName:"Connie Vaughn" -GivenName:"Connie" -Surname:"Vaughn" -Name:"Connie Vaughn" -UserPrincipalName:"Connie@ADATUM.COM" -SamAccountName:"Connie" -Path:"OU=Research,DC=ADATUM,DC=COM"  -Server:"LON-DC1.ADATUM.COM"  -Type:"user" -AccountPassword $password -Enabled $true
+```
+
 Exercise 1: Using administrative templates to manage user settings
 
 Task 1: Import administrative templates for Microsoft Office 2016
