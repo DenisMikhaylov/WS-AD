@@ -69,7 +69,8 @@ Task 3: Configure templates so that they can be issued
 New, and then click Certificate Template to Issue.
 2. In the Enable Certificate Templates window, hold the Ctrl key and click both Adatum User and
 Production Web Server. Then click OK.
- Task 4: Enroll the Web Server certificate on LON-SVR2
+
+Task 4: Enroll the Web Server certificate on LON-SVR2
 1. Switch to LON-SVR2.
 2. Click Start, and then click the Windows PowerShell icon.
 3. At the command prompt in the Windows PowerShell command-line interface, type gpupdate /force,
