@@ -34,7 +34,8 @@ The main tasks for this exercise are as follows:
 4. Enroll the Web Server certificate on LON-SVR2
 
 Exercise 1: Configuring certificate templates
- Task 1: Create a new template based on the Web Server template
+```
+Task 1: Create a new template based on the Web Server template
 1. On LON-DC1, in Server Manager, click Tools, and then click Certification Authority.
 2. In the Certification Authority console, expand AdatumCA, right-click Certificate Templates, and
 then select Manage.
@@ -46,7 +47,8 @@ then type 3 in the Validity period text box.
 Minimize the Certificate Templates Console.
 6. In the Certification Authority console on LON-DC1, right-click Revoked Certificates, select All
 tasks, click Publish, and then click OK.
- Task 2: Create a new template for users that includes smart card sign in
+
+Task 2: Create a new template for users that includes smart card sign in
 1. On LON-DC1, in Server Manager, click Tools, and then click Certification Authority.
 2. Expand AdatumCA, right-click Certificate Templates, and then click Manage. In the Certificate
 Templates Console, right-click the User certificate template, and then click Duplicate Template.
@@ -61,7 +63,8 @@ name check boxes.
 9. On the Security tab, click Authenticated Users. Under Permissions for Authenticated Users, select
 the Allow check boxes for Read, Enroll, and Autoenroll, and then click OK.
 10. Close the Certificate Templates Console.
- Task 3: Configure templates so that they can be issued
+
+Task 3: Configure templates so that they can be issued
 1. On LON-DC1, in the Certification Authority console, right-click Certificate Templates, point to
 New, and then click Certificate Template to Issue.
 2. In the Enable Certificate Templates window, hold the Ctrl key and click both Adatum User and
@@ -98,10 +101,10 @@ search results returned.
 19. In Internet Explorer, type https://lon-svr2.adatum.com in the address bar, and then press Enter.
 20. Ensure that the Internet Information Services page opens and that no certificate error displays.
 Results: After completing this exercise, you should have configured certificate templates.
-
+```
 
 Exercise 2: Enrolling and using certificates
-
+```
 Task 1: Configure autoenrollment for users
 
 1. On LON-DC1, in Server Manager, click Tools, and then click Group Policy Management.
@@ -171,10 +174,10 @@ point to All Tasks, and then click Request New Certificate.
 30. In the Select User, Computer or Group field, type Marketing, click Check Names, and then
 click OK.
 31. In the Permission section, click Everyone, click Remove, and then click OK.
-
+```
 
 Exercise 3: Configuring and implementing key recovery
-
+```
 Task 1: Configure the certification authority to issue KRA certificates
 
 1. On LON-DC1, in the Certification Authority console, expand the AdatumCA node, right-click the
@@ -299,3 +302,4 @@ steps:
 2. In the Virtual Machines list, right-click 20742B-LON-DC1, and then click Revert.
 3. In the Revert Virtual Machine dialog box, click Revert.
 4. Repeat steps 2 and 3 for 20742B-LON-SVR1, 20742B-LON-SVR1, and 20742B-LON-SVR2.
+```
