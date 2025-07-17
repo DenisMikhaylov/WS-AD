@@ -20,7 +20,7 @@ User name: Adatum\Administrator
 Password: Pa55w.rd
 
 Exercise 1: Deploying an offline root CA
-
+```
 Task 1: Create file and printer sharing exceptions
 1. Sign in to LON-SVR4 as Administrator with the password Pa55w.rd.
 2. Click Start, and then click Control Panel.
@@ -35,7 +35,7 @@ then click Save changes.
 10. Under Domain (current profile), select the Turn on file and printer sharing option, and then click
 Save changes.
 
-```
+
 Task 2: Install and configure Active Directory Certificate Services (AD CS) on LON-SVR4
 1. Switch to LON-SVR4.
 2. Click Start, and then click Server Manager.
@@ -120,7 +120,7 @@ Results: After completing this exercise, you should have successfully installed 
 standalone root certification authority (CA) role on the LON-SVR4 server. Additionally, you should have
 created an appropriate DNS record in Active Directory Domain Services (AD DS) so that other servers can
 connect to LON-SVR4.
-```
+
 
 Exercise 2: Deploying an enterprise subordinate CA
 
@@ -233,3 +233,4 @@ steps:
 2. In the Virtual Machines list, right-click 20742B-LON-DC1, and then click Revert.
 3. In the Revert Virtual Machine dialog box, click Revert.
 4. Repeat steps 2 and 3 for LON-SVR1 and LON-SVR4
+```
