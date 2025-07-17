@@ -35,7 +35,7 @@ then click Save changes.
 10. Under Domain (current profile), select the Turn on file and printer sharing option, and then click
 Save changes.
 
-
+```
 Task 2: Install and configure Active Directory Certificate Services (AD CS) on LON-SVR4
 1. Switch to LON-SVR4.
 2. Click Start, and then click Server Manager.
@@ -72,9 +72,11 @@ Properties.
 27. In the AdatumRootCA Properties dialog box, click the Extensions tab.
 28. In the Select extension drop-down list, click CRL Distribution Point (CDP), and then click Add.
 29. In the Location text box, type http://lon-svr1.adatum.com/CertData/.
+
 30. In the Variable drop-down list, click <CaName>, and then click Insert.
 31. In the Variable drop-down list, click <CRLNameSuffix>, and then click Insert.
 32. In the Variable drop-down list, click <DeltaCRLAllowed>, and then click Insert.
+
 33. In the Location text box, position the cursor at the end of the URL, type .crl, and then click OK.
 34. Select the following options, and then click Apply:
 o Include in the CDP extension of issued certificates
@@ -118,7 +120,7 @@ Results: After completing this exercise, you should have successfully installed 
 standalone root certification authority (CA) role on the LON-SVR4 server. Additionally, you should have
 created an appropriate DNS record in Active Directory Domain Services (AD DS) so that other servers can
 connect to LON-SVR4.
-
+```
 
 Exercise 2: Deploying an enterprise subordinate CA
 
